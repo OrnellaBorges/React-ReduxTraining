@@ -2,14 +2,15 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTask } from "../slices/todoSlice";
 
-const TaskForm = (props) => {
+const TaskForm = () => {
     const dispatch = useDispatch();
     const [text, setText] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        // Utilisez dispatch pour mettre à jour le state géré par Redux Toolkit
         dispatch(addTask(text));
-        props.addTask(text);
 
         setText("");
     };

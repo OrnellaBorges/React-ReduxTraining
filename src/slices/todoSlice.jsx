@@ -24,17 +24,25 @@ export const todoSlice = createSlice({
             //action = {type: "ADD_TASK", payload:"aller faire les course"}
 
             // ici on construit ine nouvelle tache reprend la creation d'une nouvelle tache => creation d'un objet
-            const newTask = {
+            /* const newTask = {
                 id: Date.now, // on crée un id avec js
                 text: action.payload, // contient la valeur de la nouvelle tache
                 done: false, // on initialise la tache a false par défaut
-            };
+            }; */
 
             // je push dans le tableau initiale ma nouvelle tache
-            state.push(newTask);
+            /* state.push(newTask); */
 
-            // Retourne une nouvelle copie du state avec la nouvelle tâche
-            return [...state, newTask];
+            //GPT correction:
+
+            // Ici, nous devons retourner une nouvelle copie du state, pas le modifier directement
+            return {
+                ...state,
+                tasks: [
+                    ...state.tasks,
+                    { id: Date.now(), text: action.payload, done: false },
+                ],
+            };
         },
 
         // Changer l'etat d'une tache
