@@ -2,8 +2,7 @@ import { useDispatch } from "react-redux";
 import { toggleTask, deleteTask } from "../slices/todoSlice";
 
 const TaskItem = ({ task }) => {
-    const dispatch = useDispatch(); // est une fonction qui me permet de parler a redux et lui transmetre une action
-
+    const dispatch = useDispatch(); // est une fonction qui me permet de parler a redux et lui transmetre une actiongit
     const defaultStyle = {
         backgroundColor: "#f5f5f5",
         padding: "10px",

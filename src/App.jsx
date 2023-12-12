@@ -4,6 +4,7 @@ import "./style.css";
 import TaskForm from "./Components/TaskForm";
 import TasksHeader from "./Components/TasksHeader";
 import TasksList from "./Components/TasksList";
+import Workers from "./Components/Workers/Workers";
 
 export default function App() {
     // stockage de la liste des taches via redux
@@ -13,6 +14,9 @@ export default function App() {
             <article className="App">
                 <TasksHeader tasks={tasks} />
                 <TasksList tasks={tasks} />
+                <div>
+                    <Workers />
+                </div>
                 <footer>
                     <TaskForm /* addTask={addTask} */ />
                 </footer>

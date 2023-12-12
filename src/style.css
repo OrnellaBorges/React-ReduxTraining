@@ -78,3 +78,37 @@ input[type="text"]:focus {
         transform: rotate(360deg);
     }
 }
+
+/* Style de base pour la section des travailleurs */
+section {
+    padding: 20px;
+    background-color: orange;
+}
+
+/* Style pour le titre "List Of Workers" */
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style pour la liste ordonnée */
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style pour chaque élément de la liste */
+li {
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Style au survol de chaque élément de la liste */
+li:hover {
+    background-color: #e0e0e0;
+}

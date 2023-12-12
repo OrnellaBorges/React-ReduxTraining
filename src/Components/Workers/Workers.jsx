@@ -4,10 +4,10 @@ const Workers = () => {
     return (
         <section>
             <h2>List Of Workers</h2>
-            <ul>
+            <ol>
                 <li>Worker 1</li>
                 <li>Worker 2</li>
-            </ul>
+            </ol>
         </section>
     );
 };
